@@ -1,6 +1,6 @@
 # Frank Engineering Interview
 
-We're so glad you're here. This interview is designed for you to show us what you can do. The only time constraint is what your schedule
+We're so glad you're here. This interview is designed for you to show us what you can do.
 
 ## The task
 

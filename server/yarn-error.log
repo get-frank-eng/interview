@@ -1,0 +1,41 @@
+Arguments: 
+  /opt/homebrew/Cellar/node/16.4.0/bin/node /opt/homebrew/bin/yarn add uuid express faker.js
+
+PATH: 
+  /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  16.4.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/faker.js/-/faker.js-2.0.0.tgz: Request failed "404 Not Found"
+      at ResponseError.ExtendableBuiltin (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:696:66)
+      at new ResponseError (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:802:124)
+      at Request.<anonymous> (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:67058:16)
+      at Request.emit (node:events:394:28)
+      at Request.module.exports.Request.onRequestResponse (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:141539:10)
+      at ClientRequest.emit (node:events:394:28)
+      at HTTPParser.parserOnIncomingClient (node:_http_client:621:27)
+      at HTTPParser.parserOnHeadersComplete (node:_http_common:127:17)
+      at TLSSocket.socketOnData (node:_http_client:487:22)
+      at TLSSocket.emit (node:events:394:28)
+
+npm manifest: 
+  {
+    "name": "frank-interview-server",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

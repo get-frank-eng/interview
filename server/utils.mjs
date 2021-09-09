@@ -46,5 +46,5 @@ function makeComment(depth = 0) {
 }
 
 export function makeDatabase() {
-  return new Array(randomIntBetween(10, 200)).fill(null).map(makePost)
+  return new Array(randomIntBetween(10, 500)).fill(null).map(makePost)
 }

@@ -14,7 +14,10 @@ app.get("/posts", (req, res) => {
       });
     }
   }
-  const { page } = req.query;
+  let { page } = req.query;
+  if (!page) {
+    page = 0;
+  }
   const perPage = 20;
   const beginning = page * perPage;
   const slice = database.slice(beginning, beginning + perPage);

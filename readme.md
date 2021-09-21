@@ -43,28 +43,28 @@ To start the server, cd into the server directory, run `npm install` to install 
 ```
 
 ## Data model
-
-
-                                    ┌───────────┐
-                                    │           │
-                                   ╱│╲          │
-    ┌──────────────┐      ┌──────────────────┐  │
-    │** Post **    │      │** Comment **     │  │
-    │- id          │      │- id              │  │
-    │- title       │     ┌│- author          │  │
-    │- author      │─────┼│- upvotes         │──┘
-    │- comments    │     └│- downvotes       │   
-    │- text        │      │- replies         │   
-    └──────────────┘      │- text            │   
-          ╲│╱             └──────────────────┘   
-           │                      ╲│╱           
-           │                       │            
-           │             ┌──────────────────┐   
-           │             │** User **        │   
-           │             │- id              │   
-           └─────────────│- name            │   
-                         │                  │   
-                         └──────────────────┘   
                          
-                         
+        ┌───────────────────┐        ┌───────────────────┐
+        │       Post        │        │      Comment      │
+        ├───────────────────┤        ├───────────────────┤
+        │id: string         │       ╱│id: string         │
+        │title: string      │────────│author: User       │
+        │author: User       │       ╲│replies: Comment[] │
+        │comments: Comment[]│        │text: string       │
+        │text: string       │        │upvotes: number    │
+        │                   │        │downvotes: number  │
+        └───────────────────┘        └───────────────────┘
+                  │                           ╲│╱         
+                  │                            │          
+                  │                            │          
+                  │              ┌─────────────┘          
+                  │              │                        
+                  │              │                        
+                  │              │                        
+                  │   ╱┌───────────────────┐              
+                  └────│       User        │              
+                      ╲├───────────────────┤              
+                       │id: string         │              
+                       │name: string       │              
+                       └───────────────────┘      
 
